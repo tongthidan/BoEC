@@ -1,0 +1,8 @@
+python manage.py
+
+// tạo superuser
+python manage.py createsuperuser
+
+// đăng kí view với admin
+-vào file admin.py
+-admin.
