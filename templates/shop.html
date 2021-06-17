@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index1.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/share.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+    <title>Shop</title>
+</head>
+
+<body>
+    <div class="header dp-flex">
+        <div class="container">
+            <div class="header1 dp-flex">
+                <div class="header1__phone">
+                    <p>
+                        <i class="fas fa-phone text-prime"></i>
+                        <strong class="text-prime">Phone:</strong>
+                        0964048725
+                    </p>
+                </div>
+                <div class="header1__email">
+                    <p>
+                        <i class="fas fa-envelope text-prime"></i>
+                        <strong class="text-prime">Email:</strong>
+                        tongthidan99@gmail.com
+                    </p>
+                </div>
+                <div class="myAcocunt m-l">
+                    <p>
+                        <i class="fas fa-lock text-prime"></i>
+                        My Account
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header2">
+        <div class="container dp-flex">
+            <div class="header2__logo">
+                <img src="./img/fronteend/logo.png" alt="" />
+            </div>
+            <div class="header2__sreach m-l dp-flex">
+                <input type="search" name="sreach" id="ok" placeholder="search" />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header__cart">
+                <button>
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <span>My Cart</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header3">
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu menu__list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link"> Home </a>
+                    </li>
+                    <li class="menu-item has-child">
+                        <a href="#" class="menu-link">
+                            Shop
+                        </a>
+                        <ul class="menu-child">
+                            <li class="menu-child-item has-child">
+                                <a href="#" class="menu-child-link">
+                                    Shope <i class="fas fa-angle-right arrow-right"></i>
+                                    <!-- <i class="fas fa-angle-down arrow-down"></i> -->
+                                </a>
+                                <ul class="menu-child menu-child1">
+                                    <li class="menu-child-item">
+                                        <a href="#" class="menu-child-link"> CodingUI </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-child-item">
+                                <a href="#" class="menu-child-link"> Blog </a>
+                            </li>
+                            <li class="menu-child-item">
+                                <a href="#" class="menu-child-link"> Video </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link"> Discover </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link"> Explore </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link"> Category </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link"> Branding </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section>
+        <div class="shop__product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="shop__product--category">
+                            <!-- <div class="line-text"><span style="padding: 0;"></span></div> -->
+                            <div class="product__category--title">
+                                <p>Product Categories</p>
+                            </div>
+                            <div class="product__category--list">
+                                <button class="accordion">Laptop</button>
+                                <div class="panel">
+                                    <a href="#"><p>Dell</p></a>
+                                    <a href="#"><p>Lenovo</p></a>
+                                    <a href="#"><p>Asus</p></a>
+                                </div>
+    
+                                <button class="accordion">Phone</button>
+                                <div class="panel">
+                                    <a href="#"><p>Iphone</p></a>
+                                </div>
+    
+                                <button class="accordion">Smart Tv</button>
+                                <div class="panel">
+                                    <a href="#"><p>Smart Tv</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop__product--price">
+                            <div class="product__price--title">
+                                <p>Price</p>
+                            </div>
+                            <fieldset class="filter-price">
+                                <div class="price-field">
+                                  <input type="range" min="100" max="500" value="135" id="lower">
+                                  <input type="range" min="100" max="500" value="500" id="upper">
+                                </div>
+                                <div class="price-wrap">
+                                  <button class=" price-title">Filter</button>
+                                  <div class="price-container">
+                                    <div class="price-wrap-1">
+                            
+                                      <label for="one">$</label>
+                                      <input id="one">
+                                    </div>
+                                    <div class="price-wrap_line">-</div>
+                                    <div class="price-wrap-2">
+                                      <label for="two">$</label>
+                                      <input id="two">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                        </div>
+                        <div class="shop__product--color">
+                            <div class="product__color--title">
+                                <p>Size</p>
+                            </div>
+                            <div class="product__color--list">
+                               <a>Green <span class="count_product_color">(1)</span></a> 
+                               <a>Blue <span class="count_product_color">(1)</span></a> 
+                               <a>Red <span class="count_product_color">(21)</span></a> 
+                               <a>Black <span class="count_product_color">(10)</span></a> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="shop__product--sortBy dp-flex">
+                            <div class="product__sort--content dropdown" id="lightdropdown">
+                                <div class="dropdown-select">
+                                  <span class="dropdown-selected">Sort By</span>
+                                  <i class="fa fa-angle-down dropdown-caret"></i>
+                                </div>
+                                <ul class="dropdown-list">
+                                  <li class="dropdown-item" data-value="Option A">
+                                    By Name
+                                  </li>
+                                  <li class="dropdown-item" data-value="Option B">
+                                    DESC
+                                  </li>
+                                  <li class="dropdown-item" data-value="Option C">
+                                    DATE
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
+                        <div class="line-text"><span>New Product</span></div>
+                         <div class="shop__product--list">
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/26.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/28.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/15.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/5.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/7.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <div class="product__item--image">
+                                        <img src="./img/fronteend/newproduct/20.jpg" alt="">
+                                    </div>
+                                    <div class="product__item--name">
+                                        <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                    </div>
+                                    <div class="product__item-rate dp-flex">
+                                        <div class="rating-star m-auto">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="product__item--price dp-flex">
+                                        <span class="text-danger m-auto">$10000</span>
+                                    </div>
+                                    <div class="product__item--addcart dp-flex">
+                                        <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="line-text"><span>Sale Product</span></div>
+                        <div class="shop__product--list">
+
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/26.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/28.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/15.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/5.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/7.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product__item">
+                                <div class="product__item--image">
+                                    <img src="./img/fronteend/newproduct/20.jpg" alt="">
+                                </div>
+                                <div class="product__item--name">
+                                    <a href="">Skmei Luxury Brand Mens Sports Watches..</a>
+                                </div>
+                                <div class="product__item-rate dp-flex">
+                                    <div class="rating-star m-auto">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="product__item--price dp-flex">
+                                    <span class="text-danger m-auto">$10000</span>
+                                </div>
+                                <div class="product__item--addcart dp-flex">
+                                    <a href="" class="m-auto"><i class="fas fa-cart-plus"></i>Add to cart</a>
+                                </div>
+                            </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="home__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="footer_signup">
+                            <div class="footer__signup--title">
+                                Sign Up For Send Newsletter
+                            </div>
+                            <div class="footer__signup--form dp-flex">
+                                <input type="email" placeholder="your email address">
+                                <input type="button" value="signup" class="active">
+                            </div>
+                        </div>
+                        <div class="footer__contact">
+                            <div class="foter__contact--title">
+                                <p> Contact Info</p>
+                            </div>
+                            <div class="footer__contact--dess">
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy …</p>
+                            </div>
+                            <div class="footer_contact--address">
+                                <p><i class="fa fa-map-marker-alt"></i><strong>Address:</strong>
+                                    1234 Street Name, City Name, United States
+                                </p>
+                            </div>
+                            <div class="footer__contact--phone">
+                                <p><i class="fa fa-fax"></i><strong>Address:</strong>
+                                    (123) 456-7890
+                                </p>
+                            </div>
+                            <div class="footer__contact--email">
+                                <p><i class="fa fa-envelope"></i><strong>Address:</strong>
+                                    mail@example.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="footer__category">
+                            <ul>
+                                <li><img src="./img/fronteend/category/ca1.jpg">Phone</li>
+                                <li><img src="./img/fronteend/category/ca2.jpg">Laptop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="footer__category">
+                            <ul>
+                                <li><img src="./img/fronteend/category/ca6.jpg">Phone</li>
+                                <li><img src="./img/fronteend/category/ca2.jpg">Laptop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer__connect">
+                            <div class="footer__connect--title">
+                                Connect with me
+                            </div>
+                            <div class="footer__connect--button dp-flex">
+                                <i class="fab fa-facebook-square"></i><a href="#">http://wwwwfacebook.com</a>
+                            </div>
+                            <div class="footer__connect--button dp-flex">
+                                <i class="fab fa-twitter"></i><a href="#">http://wwwwtwiier.com</a>
+                            </div>
+                            <div class="footer__connect--button dp-flex">
+                                <i class="fab fa-telegram"></i><a href="#">http://wwwwtelegram.com</a>
+                            </div>
+                            <div class="footer__connect--button dp-flex">
+                                <i class="fab fa-linkedin"></i><a href="#">http://wwwwlinkedin.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./js/slide.js"></script>
+<script src="./js/shop.js"></script>
+
+</html>

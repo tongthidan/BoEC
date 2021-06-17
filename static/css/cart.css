@@ -1,0 +1,37 @@
+.cart__detail--header{
+    font-size: 36px;
+}
+.cart__detail--info{
+    margin-bottom: 20px;
+    border-top: #08aeea solid 1px;
+}
+.cart__card--number{
+
+}
+.cart__card--number button{
+    padding: 5px 10px;
+   border:  1px solid rgb(200, 200, 200)
+}
+.cart__card--number input{
+    width: 50px;
+    padding: 5px;
+    border: 1px solid rgb(200, 200, 200);
+}
+.cart__card--action{
+    margin-top: 20px;
+}
+.cart__card--action button{
+    padding: 10px 20px;
+    background-color: #08aeea;
+}
+.cart__detail--wapper{
+    margin-bottom: 20px;
+}
+.payment__detail--button button{
+    padding: 20px 40px;
+    background-color: #08aeea;
+    border-radius: 5px;
+}
+.payment__detail--button a{
+    color: white;
+}

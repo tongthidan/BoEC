@@ -1,0 +1,23 @@
+input[type=text] {
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #2222  ;
+  }
+.form_left{
+    width: 50%;
+    margin: 20px;
+}
+.form_wrapper form .form_content{
+    display: flex;
+}
+.form_button{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+.form_button input{
+    padding: 20px 50px;
+    border-radius: 45px;
+}

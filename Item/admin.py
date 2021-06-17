@@ -1,6 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from Item.models import Item
+from django.contrib.admin import ModelAdmin
 
-admin.site.register(Item)
+from Item.models import Item
+class display_item(admin.ModelAdmin):
+    list_display = ['product','priceSale','saleOff','numberItem']
+    search_fields = ['priceSale']
+admin.site.register(Item,display_item)

@@ -7,10 +7,19 @@ from  Shippment.models import Shippment
 from Item.models import Item
 
 class Cart(models.Model):
+    STATUS = (
+        ('True', 'active'),
+        ('False', 'inactive'),
+    )
+    # cartType = models.CharField(max_length=100)
 
-    items = models.ForeignKey(Item, on_delete= models.CASCADE)
-    statusCart = models.CharField(max_length=255)
 
+    statusCart = models.CharField(max_length=100,choices= STATUS)
+
+class Cart_Item(models.Model):
+    items = models.ForeignKey(Item, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, on_delete= models.CASCADE)
+    numberItem = models.IntegerField()
 class Order(models.Model):
     STATUS = (
         ('True', 'Payment'),

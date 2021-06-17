@@ -1,0 +1,87 @@
+.shop__productdetail--content{
+    margin-bottom: 20PX;
+}
+.productdetail__infor{
+    padding-right: 20px;
+}
+.productdetail__detail-number{
+    margin-bottom: 20px;
+}
+.productdetail__detail-number input{
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 20%;
+    border: 1px solid #e5e5e5;
+    margin-left: 20px;
+}
+.product__detail--desc ul li{
+    list-style-type: circle;
+}
+.pricing {
+            margin-bottom: 1.5rem;
+            position: relative;
+ }
+.pricing input[type="radio"] {
+            display: none;
+ }
+          .pricing input[type="radio"]:checked + .pricing-check {
+            border-color: white;
+          }
+          .pricing input[type="radio"]:checked ~ .pricing-content {
+            border-color: var(--primary);
+            background-color: var(--primary);
+            color: white;
+          }
+          .pricing
+            input[type="radio"]:checked
+            ~ .pricing-content
+            .pricing-saving {
+            background-color: white;
+          }
+          .pricing-check {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+            background-color: white;
+            border: 2px solid #aeaec4;
+            cursor: pointer;
+            position: absolute;
+            left: 2.5rem;
+            top: 50%;
+            margin-top: -1rem;
+          }
+          .pricing-content {
+            padding: 10px 20px 10px 75px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #0c0e44;
+          }
+          .pricing-saving {
+            text-align: center;
+            display: inline-block;
+            padding: 7.5px 1.5rem;
+            color: #fa9376;
+            background-color: #feeeee;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+          }
+          .pricing-price {
+            display: flex;
+            align-items: center;
+          }
+          .pricing-money {
+            font-weight: 600;
+            font-size: 3rem;
+          }
+          .pricing-time {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+          }
+.product__details-buttonAdd{
+    padding: 20px 20px;
+    background-color: var(--primary);
+}
