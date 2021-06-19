@@ -111,17 +111,18 @@
         <div class="shop__productdetail--content">
             <div class="container">
                 <div class="row">
+                    {% for p in product %}
                     <div class="col-4">
-                        <div class="productdetail__image">
-                            <img src="../static/img/fronteend/productdetail/5.jpg" alt="">
+                        <div class="productdetail__image" style="margin-right: 50px">
+                             <img src="{% static ''%}uploads/{{p.product.picture}}" alt="">
                         </div>
                     </div>
-                    {% for p in product %}
+
                     <div class="col-5">
 
                         <div class="productdetail__infor">
                             <div class="product__infor--title">
-                                <h1>{{  p.product.name }}</h1>
+                                <h1>{{  p.product.nameProduct }}</h1>
                             </div>
                             <div class="product__item-rate dp-flex">
                                 <div class="rating-star m-r">
@@ -136,20 +137,19 @@
                                 <span class="text-danger m-r">{{ p.priceSale }}</span>
                             </div>
                             <div class="product__detail--desc">
-                                <p>The Frankie Sweatshirt is your best friend at long
-                                    afternoon stadium stints or winter trailside campsites.
-                                    The soft fleece fabric keeps you toasty as moisture-wicking
-                                    technology kicks in when the sun comes out.</p>
-                                <ul>
-                                    <li>Light green crewneck sweatshirt.</li>
-                                    <li>Hand pockets.</li>
-                                    <li>Relaxed fit.</li>
-                                    <li>Machine wash/dry.</li>
-                                </ul>
+                                <p>{{ p.product.description }}</p>
+{#                                <ul>#}
+{#                                    <li>Light green crewneck sweatshirt.</li>#}
+{#                                    <li>Hand pockets.</li>#}
+{#                                    <li>Relaxed fit.</li>#}
+{#                                    <li>Machine wash/dry.</li>#}
+{#                                </ul>#}
                             </div>
+                             <form method="post" action="{% url 'add_to_cart' %}">
+                                    {% csrf_token %}
                             <div class="productdetail__detail-number">
                                 <label for="number">NUMBER</label>
-                                <input type="number" name="number" id="" value="1">
+                                <input type="number" name="number" id="number" value="1">
                             </div>
 {#                            <div class="productdetail_detail-ship">#}
 {#                                <div class="pricing">#}
@@ -182,8 +182,13 @@
 {#                                </div>#}
 {#                            </div>#}
                             <div class="productdetail_detail-addToCart">
-                                <button class="product__details-buttonAdd"><a href="Cart.html">Add To cart</a></button>
+
+                                    <input type="hidden" name="product" value="{{p.product.id}}">
+
+                                <button  type="submit" class="product__details-buttonAdd">Add To cart</button>
+
                             </div>
+                                  </form>
                         </div>
                          {% endfor %}
                     </div>

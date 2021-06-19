@@ -127,89 +127,64 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            {% for i in cartItems %}
                                 <tr>
                                     <th><img src="../static/img/fronteend/newproduct/15.jpg" alt=""></th>
-                                    <th>$3000</th>
+                                    <th>{{ i.items.product.nameProduct }}</th>
                                     <th>X</th>
-                                    <th><span>3</span></th>
-                                    <th><Span>$9000</Span></th>
+                                    <th><span>{{ i.numberItem }}</span></th>
+                                    <th><Span>{{ i.items.priceSale }}</Span></th>
                                 </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
+                    </div>
+                <form action="{% url 'order' %}" method="POST">
+
+                {% csrf_token %}
+                    <div class="cart__detail--info">
+                        <p>Payment</p>
+                        <div class="productdetail_detail-ship">
+                            {% for i in payments %}
+                            <div class="pricing">
+                                <input type="radio" name="payment" id="save2" value="{{ i.id }}" />
+                                <label for="save2" class="pricing-check"></label>
+                                <div class="pricing-content">
+
+                                    <div class="pricing-info">
+                                      {{ i.typePayment }}
+                                        <span class="pricing-saving">Tiết kiệm 20 %</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
                     </div>
                     <div class="cart__detail--info">
                         <p>Shipment</p>
                         <div class="productdetail_detail-ship">
+                            {% for i in shipments %}
                             <div class="pricing">
-                                <input type="radio" name="pricing" id="save" />
+                                <input type="radio" name="shipment" id="save" value="{{ i.id }}" />
                                 <label for="save" class="pricing-check"></label>
                                 <div class="pricing-content">
                                     <div class="pricing-info">
-                                        Save
-                                        <span class="pricing-saving">Save %20</span>
-                                    </div>
-                                    <div class="pricing-price">
-                                        <span class="pricing-money">$19</span>
-                                        <span class="pricing-time">/ Month</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pricing">
-                                <input type="radio" name="pricing" id="express" />
-                                <label for="express" class="pricing-check"></label>
-                                <div class="pricing-content">
-                                    <div class="pricing-info">
-                                        Express
-                                        <span class="pricing-saving">Save %20</span>
-                                    </div>
-                                    <div class="pricing-price">
-                                        <span class="pricing-money">$19</span>
-                                        <span class="pricing-time">/ Month</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart__detail--info">
-                        <p>payment</p>
-                        <div class="productdetail_detail-ship">
-                            <div class="pricing">
-                                <input type="radio" name="pricing" id="save" />
-                                <label for="save" class="pricing-check"></label>
-                                <div class="pricing-content">
-                                    <div class="pricing-info">
-                                       Thanh toán tiền mặt
+                                       {{ i.typeShippment }}
                                         <span class="pricing-saving"><i class="fa fa-money-check"></i></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="pricing">
-                                <input type="radio" name="pricing" id="express" />
-                                <label for="express" class="pricing-check"></label>
-                                <div class="pricing-content">
-                                    <div class="pricing-info">
-                                        Thanh toán thẻ ngân hàng
-                                        <span class="pricing-saving"><i class="fa fa-credit-card"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pricing">
-                                <input type="radio" name="pricing" id="momo" />
-                                <label for="momo" class="pricing-check"></label>
-                                <div class="pricing-content">
-                                    <div class="pricing-info">
-                                        Thanh toán momo
-                                        <span class="pricing-saving"><i class="fa fa-money-bill-wave"></i></span>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="payment__detail--button dp-flex">
-                        <button class="m-auto"><a href="payment.html">Confirm Order</a></button>
+                        <button type="submit" class="m-auto">Confirm Order</button>
                     </div>
+                </form>
                 </div>
-                
+
 
             </div>
         </div>

@@ -1,39 +1,20 @@
 from django.db import models
 
-# Create your models here.
-
-# class Category(models.Model):
-#     name=models.CharField(max_length=50)
-#     description=models.TextField(max_length=300)
 from django.utils.safestring import mark_safe
-
-
-class ProductSize( models.Model):
-    size = models.CharField(max_length=50)
-    descriptionSize = models.TextField(max_length=300)
-    def __str__(self):
-        return  self.size
-class ProductColor(models.Model):
-    color = models.CharField(max_length=50)
-    colorCode = models.TextField(max_length=300)
-
-    def __str__(self):
-        return self.color
-
-class ProductImage(models.Model):
-
-    image = models.ImageField()
-
-
-
 class Product( models.Model):
-    name = models.CharField(max_length=255)
+    TYPE = (
+        ('1', 'Book'),
+        ('2', 'Clothes'),
+        ('3', 'Electronic')
+    )
+    typeProduct = models.CharField(max_length=10, choices= TYPE)
+    nameProduct = models.CharField(max_length=255)
+    picture = models.ImageField(blank=True, upload_to='images/')
+    description = models.TextField(max_length= 255)
     priceInput = models.DecimalField(max_digits=12, decimal_places=2)
-    picture=models.ImageField(blank=True, upload_to='images/')
     numberProduct = models.IntegerField(default=0)
-    imageP = models.ForeignKey(ProductImage, on_delete=models.CASCADE)
     def __str__(self):
-        return self.name
+        return self.nameProduct
 
     def image_tag(self):
         if self.image.url is not None:
@@ -41,20 +22,35 @@ class Product( models.Model):
         else:
             return ""
 class Book(Product):
-    # product=models.ForeignKey(Product,on_delete=models.CASCADE)
     author = models.CharField(max_length=255)
     publisher = models.CharField(max_length=255)
 class Electro(Product):
-    sizeP = models.ForeignKey(ProductSize, on_delete=models.CASCADE)
-    colorP = models.ForeignKey(ProductColor, on_delete=models.CASCADE)
+
     producer = models.CharField(max_length=255)
-    label = models.CharField(max_length=255)
     national = models.CharField(max_length=255)
 class Clothes(Product):
     typeClothes = models.CharField(max_length=255)
-    sizeP = models.ForeignKey(ProductSize, on_delete=models.CASCADE)
-    colorP = models.ForeignKey(ProductColor, on_delete=models.CASCADE)
     manufacture = models.CharField(max_length=255)
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product,on_delete= models.CASCADE)
+    image = models.ImageField()
+class ProductSize( models.Model):
+    clothes = models.ForeignKey(Clothes, on_delete= models.CASCADE)
+    size = models.CharField(max_length=50)
+    descriptionSize = models.TextField(max_length=300)
+    def __str__(self):
+        return  self.size
+class ProductColor(models.Model):
+    color = models.CharField(max_length=50)
+    colorCode = models.TextField(max_length=300)
+    eletric = models.ForeignKey(Electro, on_delete= models.CASCADE)
+    clothes =  models.ForeignKey(Clothes, on_delete= models.CASCADE)
+    def __str__(self):
+        return self.color
+
+
+
+
 
 
 

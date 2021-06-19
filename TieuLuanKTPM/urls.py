@@ -21,8 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home,name = 'home'),
     path('productDetail/<int:item_id>', views.ProductDetail, name = 'productDetail'),
-    path('payment/',views.Payment, name = 'order'),
+    path('payment/',views.payment, name = 'order'),
     path('cart/',views.Cart, name = 'cart'),
     path('login/',views.Login,name = 'login'),
-    path('register',views.Register,name = 'register')
+    path('register/',views.Register,name = 'register'),
+    path('add-to-cart/',views.AddToCart ,name="add_to_cart"),
+    path('confirm/' ,views.Confirm, name = 'confirm')
 ]

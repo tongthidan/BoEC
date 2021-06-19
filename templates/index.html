@@ -208,10 +208,10 @@
                                 {% for p in products %}
                                 <div class="product__item">
                                     <div class="product__item--image">
-                                        <img src="uploads/{{p.product.imageP.image}}" alt="">
+                                        <img src="{% static ''%}uploads/{{p.product.picture}}" alt="">
                                     </div>
                                     <div class="product__item--name">
-                                        <a href="{% url 'productDetail' p.id %}">{{ p.product.name }}</a>
+                                        <a href="{% url 'productDetail' p.id %}">{{ p.product.nameProduct }}</a>
                                     </div>
                                     <div class="product__item-rate dp-flex">
                                         <div class="rating-star m-auto">

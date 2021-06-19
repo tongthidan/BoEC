@@ -118,22 +118,23 @@
                         <div class="cart__content-title">
                             <p id="cart_empty" style="display: none;">Your cart is empty</p>
                             <div class="cart__content--card">
+                                 {% for p in listItem %}
                                 <div class="row">
+
                                     <div class="col-3 dp-flex">
-                                        <div class="cart__card--image">
-                                            <img src="../static/img/fronteend/newproduct/15.jpg" alt="">
+                                        <div class="cart__card--image " style="margin-right: 50px ;margin-bottom: 20px" >
+                                             <img src="{% static ''%}uploads/{{p.items.product.picture}}" alt="" >
                                         </div>
                                     </div>
+
                                     <div class="col-5">
                                         <div class="cart__card--info">
                                             <div class="cart__product--name">
-                                                <p>Top,The Village Of Retro Furniture,Vintage…</p>
+                                            <p>{{ p.items.product.nameProduct }}</p>
+{#                                                <p>Top,The Village Of Retro Furniture,Vintage…</p>#}
                                             </div>
                                             <div class="cart__card--desc">
-                                                The Frankie Sweatshirt is your best friend at 
-                                                long afternoon stadium stints or winter trailside campsites.
-                                                The soft fleece fabric keeps you toasty as moisture-wicking 
-                                                technology kicks in when the sun comes out.
+                                                {{ p.items.product.description }}
                                             </div>
                                             <div class="cart__card--price">
                                                 <p style="color: red;">$30000</p>
@@ -143,14 +144,19 @@
                                                 <input min="0" type="number" name="number" id="number_cart" value="1">
                                                 <button onclick="changeNumber(1)" class="number_cart">+</button>
                                             </div>
+
                                             <div class="cart__card--action">
                                                 <button onclick="remove_cart()">Remove</button>
-                                                <button><a href="payment.html">Order</a></button>
+
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
+                                 {% endfor %}
+                            <button><a href="{% url 'order' %}">Order</a></button>
                             </div>
+
                         </div>
                     </div>
                 </div>
